@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import textile from '@/assets/textile-editorial.jpg';
-import fashion from '@/assets/fashion-editorial.jpg';
+import strategy from '@/assets/brand-strategy.jpg';
+import collaboration from '@/assets/pr-connections.jpg';
 
 const brands = [
   {name:'Chokhana', sub:'The Weave', full:'Chokhana – The Weave'},
@@ -19,8 +19,8 @@ export function BrandWork() {
   return <section id="work" className="section page-width">
     <div className="section-heading"><div><p className="eyebrow">01 / The work</p><h2>Good brands.<br/><em>Meaningful connections.</em></h2></div><p>From a brand’s social presence to the people who bring its story to life — a little strategy, a lot of intention.</p></div>
     <div className="work-grid">
-      <article className="work-item"><div className="work-image"><img src={textile} width={1024} height={1280} loading="lazy" alt="Illustrative editorial still life of woven textiles; not a client campaign"/></div><div className="work-caption"><div><h3>Brand marketing</h3><p>Social media · Content · Brand storytelling</p></div><ArrowUpRight size={21}/></div><p className="work-summary">Social media calendars, copywriting, client coordination, shoots, on-ground events, and website development through my work at Titli Brand Consultancy.</p></article>
-      <article className="work-item"><div className="work-image"><img src={fashion} width={1024} height={1280} loading="lazy" alt="Illustrative editorial fashion still life; not a client campaign"/></div><div className="work-caption"><div><h3>PR & collaborations</h3><p>Sourcing · Barter · Collaborations</p></div><ArrowUpRight size={21}/></div><p className="work-summary">Working on sourcing, barter opportunities, and collaborations for brands across India — connecting brands with people and possibilities.</p></article>
+      <article className="work-item"><div className="work-image"><img src={strategy} width={1536} height={1024} loading="lazy" alt="Illustrative brand strategy materials and visual identity planning; not a client campaign"/></div><div className="work-caption"><div><h3>Brand marketing</h3><p>Social media · Content · Brand storytelling</p></div><ArrowUpRight size={21}/></div><p className="work-summary">Social media calendars, copywriting, client coordination, shoots, on-ground events, and website development through my work at Titli Brand Consultancy.</p></article>
+      <article className="work-item"><div className="work-image"><img src={collaboration} width={1536} height={1024} loading="lazy" alt="Illustrative collaboration meeting with planning materials; not a client campaign"/></div><div className="work-caption"><div><h3>PR & collaborations</h3><p>Sourcing · Barter · Collaborations</p></div><ArrowUpRight size={21}/></div><p className="work-summary">Working on sourcing, barter opportunities, and collaborations for brands across India — connecting brands with people and possibilities.</p></article>
     </div>
     <p className="imagery-note">Editorial imagery is illustrative, not client campaign photography.</p>
     <div className="brands-heading"><span>Brands I’ve worked with</span><span>Marketing & public relations</span></div>
