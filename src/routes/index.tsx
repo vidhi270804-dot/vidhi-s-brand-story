@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { ArrowDown, ArrowUpRight, Download, MapPin, Music2, BookOpen, Coffee, Compass, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BrandWork } from '@/components/brand-work';
+import { SessionMenu } from '@/components/session-menu';
 import moodboard from '@/assets/strategy-workspace.jpg';
 import resume from '@/assets/resume.asset.json';
 
@@ -36,7 +37,7 @@ const interests = [
 
 function Index() {
  return <>
-  <header className="site-header page-width"><a href="#" className="wordmark" aria-label="Vidhi Somani home">vidhi<span>.</span></a><nav className="nav-links" aria-label="Main navigation"><a href="#work" className="desktop-link">My work</a><a href="#about" className="desktop-link">About me</a><a href="#journey" className="desktop-link">My journey</a><Button variant="editorialOutline" asChild><a href="#contact">Let’s connect <ArrowUpRight/></a></Button></nav></header>
+  <header className="site-header page-width"><a href="#" className="wordmark" aria-label="Vidhi Somani home">vidhi<span>.</span></a><nav className="nav-links" aria-label="Main navigation"><a href="#work" className="desktop-link">My work</a><a href="#about" className="desktop-link">About me</a><a href="#journey" className="desktop-link">My journey</a><SessionMenu/><Button variant="editorialOutline" asChild><a href="#contact">Let’s connect <ArrowUpRight/></a></Button></nav></header>
   <main>
    <section className="hero page-width"><p className="eyebrow">Branding · Marketing · Public relations</p><h1>Vidhi <em>Somani</em><span className="text-primary">.</span></h1><p className="hero-description">A curious mind. A creative heart.<br/>Building brand stories and connections that mean something.</p><div className="hero-actions"><Button variant="editorial" asChild><a href="#work">Explore my work <ArrowDown/></a></Button><Button variant="editorialOutline" asChild><a href={resume.url} target="_blank" rel="noreferrer" download="Vidhi-Somani-Resume.pdf">My résumé <Download/></a></Button></div><div className="hero-photo"><img src={moodboard} width={1536} height={1024} alt="Illustrative professional workspace with brand strategy boards, a laptop, and planning materials" fetchPriority="high"/><span className="photo-label">A little glimpse into my creative world</span></div><div className="hero-bottom"><span><MapPin size={12}/>Based in Singapore · Connected to India</span><span>Strategy meets a little soul <Compass size={12}/></span></div></section>
    <BrandWork/>
