@@ -10,7 +10,7 @@ export function SessionMenu() {
   const session = sessions.find(item => item.id === openId);
   return <>
     <DropdownMenu>
-      <DropdownMenuTrigger asChild><Button variant="ghost" className="session-menu-trigger">Sessions <ChevronDown/></Button></DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild><Button variant="ghost" className="session-menu-trigger">Digital Platforms <ChevronDown/></Button></DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={10} className="session-dropdown">
         {sessions.map(item => <div key={item.id}>
           <DropdownMenuLabel><span className="session-menu-title">{item.title}</span><span className="session-menu-date">{item.date}</span></DropdownMenuLabel>

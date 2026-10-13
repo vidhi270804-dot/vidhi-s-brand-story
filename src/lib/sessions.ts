@@ -11,7 +11,7 @@ export type Session = {
 
 export const sessions: Session[] = [{
   id: 'vibe-coding-1',
-  title: 'Vibe Coding · Session 1',
+  title: 'S1: Vibe Coding',
   date: '9 October 2026',
   facilitators: ['Nirvan', 'Rishabh', 'Yibo'],
   tools: ['Claude Pro or Lovable', 'GitHub', 'Vercel'],
