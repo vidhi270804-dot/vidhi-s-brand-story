@@ -1,17 +1,29 @@
-export const sessions = [{
+export type Session = {
+  id: string;
+  title: string;
+  date: string;
+  facilitators: string[];
+  tools: string[];
+  reflection: string[];
+  takeaway: string;
+  nextStep: string;
+};
+
+export const sessions: Session[] = [{
   id: 'vibe-coding-1',
   title: 'Vibe Coding · Session 1',
   date: '9 October 2026',
   facilitators: ['Nirvan', 'Rishabh', 'Yibo'],
-  feedback: 'I found the first Vibe Coding session very helpful. Nirvan, Rishabh, and Yibo showed us how we could use Lovable to vibe code our own websites. Even though I don’t have a Claude subscription, the session helped me see another way to get started and bring my website idea to life.',
-  cards: [
-    { question: 'Which platform did we explore for creating a website?', answer: 'Lovable — a way to vibe code our own websites.' },
-    { question: 'Did I need a Claude subscription to get started with Lovable?', answer: 'No. The facilitators explained Lovable as another way to get started, even without a Claude subscription.' },
-    { question: 'Who helped us during the session?', answer: 'Nirvan, Rishabh, and Yibo.' },
+  tools: ['Claude Pro or Lovable', 'GitHub', 'Vercel'],
+  reflection: [
+    'We began with the tools. The facilitators showed us that all we need to start is Claude Pro or Lovable, along with GitHub and Vercel. I don’t have a Claude subscription, so Lovable was the path that made sense for me — and they made it clear that it is enough to get started.',
+    'What stayed with me most was the advice to simply begin. Rather than pondering over what a good idea for the website is, we were told to start working on it and see where it takes us. They were very clear that giving it a shot matters far more than having the perfect idea first.',
+    'They also said we can build anything — the prompt can be anything, the website can be anything. That took a great deal of the pressure out of it for me.',
+    'We were shown how to carry the work forward too: export the design into Claude Code, which then helps you build the website, or, if you are using Lovable, export it to GitHub and connect it from there.',
+    'I have never vibe coded before, and they did not make it look like a difficult thing to do. They made it easy, simple, and easy to understand. This session has given me a very good understanding of how to build a website.',
+    'The one place I am still facing a little trouble is deploying the website or making it public. I’ve gotten in touch with one of the mentors and he mentioned he’d be glad to help me with it.',
+    'All in all, a very productive session.',
   ],
-  quiz: [
-    { question: 'Which platform did the facilitators introduce for vibe coding a website?', options: ['Lovable', 'Microsoft Excel', 'PowerPoint'], correct: 0, explanation: 'The session introduced Lovable as a way to create our websites.' },
-    { question: 'Did Vidhi have a Claude subscription during the session?', options: ['Yes', 'No'], correct: 1, explanation: 'Vidhi didn’t have a Claude subscription, but learned how she could use Lovable instead.' },
-    { question: 'Who helped with the first Vibe Coding session?', options: ['Nirvan and Rishabh only', 'Yibo only', 'Nirvan, Rishabh, and Yibo'], correct: 2, explanation: 'All three helped during the session on 9 October 2026.' },
-  ],
+  takeaway: 'Just give it a shot — you can build anything.',
+  nextStep: 'Learn how to deploy the website and make it public, with help from a mentor.',
 }];
