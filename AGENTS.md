@@ -12,3 +12,4 @@
 - Keep this personal portfolio as a single content route with in-page section navigation; all content belongs to one continuous personal narrative.
 - Use bundled editorial imagery only as illustrative mood imagery, never as evidence of client campaign work; actual campaign assets must come from the owner.
 - Use Lovable Assets pointers for downloadable uploaded documents; this keeps binary documents out of the source repository.
+- Keep session content in a shared browser-safe data collection and present it through the header menu and a tabbed dialog; this supports additional sessions without duplicating the interface or changing the single-page portfolio structure.
