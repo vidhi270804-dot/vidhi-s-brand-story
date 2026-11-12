@@ -288,3 +288,19 @@ a { text-decoration: none; }
 @media(max-width:760px) { .nav-links {gap:5px;} .session-dialog {padding:24px;} }
 @media(max-width:360px) { .site-header {flex-wrap:wrap; height:auto; min-height:72px; gap:8px; padding-block:12px;} }
 @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto;} *,*::before,*::after {animation:none!important; transition:none!important;} }
+.session-visual { margin-top:26px; padding:20px; border:1px solid var(--border); background:var(--surface-subtle); }
+.session-visual h3 { font-size:16px; font-weight:600; margin-bottom:14px; }
+.flow { list-style:none; margin:0; padding:0; }
+.flow li { display:flex; flex-direction:column; align-items:center; }
+.flow-step { display:flex; gap:12px; width:100%; padding:12px 14px; background:var(--background); border:1px solid var(--border); }
+.flow-step p { font-size:13px; line-height:1.6; color:var(--muted-foreground); margin:2px 0 0; }
+.flow-num { flex:none; width:26px; height:26px; display:grid; place-items:center; border-radius:50%; background:var(--primary); color:var(--primary-foreground); font-size:12px; font-weight:600; }
+.flow-arrow { width:18px; height:18px; margin:6px 0; color:var(--primary); }
+.team-hint { font-size:13px; color:var(--muted-foreground); margin-bottom:12px; }
+.team-roles { display:flex; flex-wrap:wrap; gap:8px; }
+.team-role { font-size:12px; padding:8px 12px; border:1px solid var(--border); background:var(--background); color:var(--foreground); cursor:pointer; }
+.team-role.is-active { background:var(--primary); color:var(--primary-foreground); border-color:var(--primary); }
+.team-role:disabled { opacity:.4; cursor:default; }
+.team-detail { margin-top:14px; padding:14px; background:var(--background); border-left:3px solid var(--primary); }
+.team-detail p { font-size:13px; line-height:1.7; color:var(--muted-foreground); margin:4px 0 0; }
+.team-nav { display:flex; justify-content:space-between; align-items:center; margin-top:12px; font-size:12px; color:var(--muted-foreground); }
