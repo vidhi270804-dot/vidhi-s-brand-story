@@ -31,7 +31,7 @@ const roles = [
 
 export function AiTeamExplorer() {
   const [active, setActive] = useState(0);
-  const role = roles[active];
+  const role = roles[active] ?? roles[0]!;
   return <div className="session-visual">
     <h3>Build your AI marketing team</h3>
     <p className="team-hint">Tap each role to see what it does in the workflow.</p>
