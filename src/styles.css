@@ -63,23 +63,23 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.99 0.002 170);
-  --foreground: oklch(0.25 0.008 170);
-  --card: oklch(1 0 0);
+  --background: oklch(0.975 0.012 85);
+  --foreground: oklch(0.24 0.02 50);
+  --card: oklch(0.99 0.008 85);
   --card-foreground: var(--foreground);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.99 0.008 85);
   --popover-foreground: var(--foreground);
-  --primary: oklch(0.37 0.062 177);
-  --primary-foreground: oklch(0.99 0.002 170);
-  --secondary: oklch(0.94 0.012 170);
+  --primary: oklch(0.54 0.14 42);
+  --primary-foreground: oklch(0.98 0.01 85);
+  --secondary: oklch(0.9 0.08 90);
   --secondary-foreground: var(--primary);
-  --muted: oklch(0.965 0.004 170);
-  --muted-foreground: oklch(0.48 0.012 170);
-  --accent: oklch(0.94 0.012 170);
+  --muted: oklch(0.94 0.018 85);
+  --muted-foreground: oklch(0.47 0.03 55);
+  --accent: oklch(0.86 0.12 88);
   --accent-foreground: var(--primary);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.875 0.008 170);
+  --border: oklch(0.86 0.025 75);
   --input: var(--border);
   --ring: var(--primary);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -144,19 +144,19 @@
 }
 
 :root {
-  --font-body: 'DM Sans', sans-serif;
-  --font-display: 'Manrope', sans-serif;
-  --surface-subtle: oklch(0.955 0.006 170);
+  --font-body: 'Work Sans', sans-serif;
+  --font-display: 'Instrument Serif', serif;
+  --surface-subtle: oklch(0.93 0.05 88);
   --surface-paper: oklch(1 0 0);
-  --ink-inverse: oklch(0.99 0.003 170);
-  --overlay: oklch(0.2 0.01 170 / 60%);
+  --ink-inverse: oklch(0.97 0.015 85);
+  --overlay: oklch(0.22 0.03 45 / 60%);
 }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body { font-family: var(--font-body); letter-spacing: 0; }
 ::selection { background: var(--secondary); color: var(--primary); }
 h1,h2,h3,p { margin: 0; }
-h1,h2,.display { font-family: var(--font-display); font-weight: 600; letter-spacing: 0; }
-em { font-style: normal; }
+h1,h2,.display { font-family: var(--font-display); font-weight: 400; letter-spacing: 0; }
+em { font-style: italic; }
 a { text-decoration: none; }
 .site-header { height: 84px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
 .page-width { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
@@ -187,13 +187,13 @@ a { text-decoration: none; }
 .work-image img { width:100%; height:100%; object-fit:cover; object-position:center 56%; transition:transform .6s; }
 .work-item:hover .work-image img { transform:scale(1.025); }
 .work-caption { display:flex; justify-content:space-between; align-items:center; padding-block:18px; border-bottom:1px solid var(--border); }
-.work-caption h3 { font-size: 24px; font-family:var(--font-display); font-weight:600; }
+.work-caption h3 { font-size: 24px; font-family:var(--font-display); font-weight:400; }
 .work-caption p { font-size:11px; color:var(--muted-foreground); margin-top:4px; }
 .work-summary { font-size:12px; line-height:1.8; margin-top:14px; color:var(--muted-foreground); }
 .imagery-note { margin-top:20px; font-size:10px; color:var(--muted-foreground); }
 .brands-heading { margin-top:57px; display:flex; justify-content:space-between; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; }
 .brands-grid { display:grid; grid-template-columns:repeat(3,1fr); margin-top:20px; border-top:1px solid var(--border); border-left:1px solid var(--border); }
-.brand-button { height:102px; width:100%; border-right:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0; display:flex; flex-direction:column; gap:0; font-family:var(--font-display); font-size:23px; font-weight:500; white-space:normal; }
+.brand-button { height:102px; width:100%; border-right:1px solid var(--border); border-bottom:1px solid var(--border); border-radius:0; display:flex; flex-direction:column; gap:0; font-family:var(--font-display); font-size:23px; font-weight:400; white-space:normal; }
 .brand-button small { font-family:var(--font-body); text-transform:uppercase; font-size:8px; letter-spacing:2px; margin-top:3px; }
 .subtle-band { background:var(--surface-subtle); }
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; }
@@ -202,7 +202,7 @@ a { text-decoration: none; }
 .about-copy { font-size:13px; line-height:1.95; color:var(--muted-foreground); }
 .about-copy + .about-copy { margin-top:16px; }
 .personal-notes { padding-top:13px; }
-.personal-notes h3 { font-family:var(--font-display); font-size:26px; font-style:normal; font-weight:600; margin-bottom:24px; }
+.personal-notes h3 { font-family:var(--font-display); font-size:26px; font-style:normal; font-weight:400; margin-bottom:24px; }
 .interest-row { display:flex; gap:19px; padding-block:18px; border-top:1px solid var(--border); }
 .interest-row svg { width:21px; height:21px; color:var(--primary); margin-top:3px; flex-shrink:0; }
 .interest-row h4 { font-size:12px; font-weight:500; margin:0 0 5px; }
@@ -216,7 +216,7 @@ a { text-decoration: none; }
 .timeline-entry p { font-size:11px; line-height:1.8; color:var(--muted-foreground); margin-top:10px; }
 .research { margin-top:46px; background:var(--surface-subtle); padding:30px; display:grid; grid-template-columns:40px 1fr auto; gap:20px; align-items:center; }
 .research > svg { color:var(--primary); }
-.research h3 { font-family:var(--font-display); font-size:21px; line-height:1.5; margin-block:9px; font-weight:600; }
+.research h3 { font-family:var(--font-display); font-size:21px; line-height:1.5; margin-block:9px; font-weight:400; }
 .research p { font-size:11px; color:var(--muted-foreground); line-height:1.7; }
 .contact-section { background:var(--foreground); color:var(--ink-inverse); text-align:center; padding-block:66px; }
 .contact-section h2 { font-size:54px; margin-block:15px 19px; line-height:1.25; }
@@ -227,7 +227,7 @@ a { text-decoration: none; }
 .footer-links { display:flex; gap:24px; font-size:11px; }
 .dialog-overlay { background:var(--overlay); }
 .brand-dialog { width:calc(100% - 32px); padding:36px; }
-.brand-dialog h2 { font-family:var(--font-display); font-size:30px; font-weight:600; line-height:1.3; }
+.brand-dialog h2 { font-family:var(--font-display); font-size:30px; font-weight:400; line-height:1.3; }
 .brand-dialog p { line-height:1.8; }
 .brand-dialog .dialog-note { font-size:12px; color:var(--muted-foreground); }
 .hero { animation:appear .7s ease-out both; }
@@ -304,3 +304,23 @@ a { text-decoration: none; }
 .team-detail { margin-top:14px; padding:14px; background:var(--background); border-left:3px solid var(--primary); }
 .team-detail p { font-size:13px; line-height:1.7; color:var(--muted-foreground); margin:4px 0 0; }
 .team-nav { display:flex; justify-content:space-between; align-items:center; margin-top:12px; font-size:12px; color:var(--muted-foreground); }
+
+/* Magazine layout */
+.mag-masthead { display:flex; justify-content:space-between; padding-block:10px; border-bottom:2px solid var(--foreground); font-size:10px; text-transform:uppercase; letter-spacing:2px; color:var(--muted-foreground); }
+.hero { text-align:left; display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:end; padding-top:40px; }
+.hero h1 { font-size:120px; line-height:.95; }
+.hero-description { margin:22px 0 26px; font-size:15px; }
+.hero-actions { justify-content:flex-start; flex-wrap:wrap; }
+.hero-photo { margin-top:0; height:440px; grid-row:span 1; }
+.hero-bottom { grid-column:1 / -1; border-top:1px solid var(--border); }
+.section-heading h2,.about-grid h2 { font-size:56px; line-height:1.05; }
+.work-grid { grid-template-columns:1.6fr 1fr; }
+.work-grid > :first-child .work-image { height:460px; }
+.work-caption h3 { font-size:30px; }
+.brand-button { font-size:28px; }
+.brand-button:hover { background:var(--accent); }
+.contact-section { background:var(--primary); }
+.contact-section h2 { font-size:72px; }
+.session-visual .flow-num, .flow-num { font-family:var(--font-body); }
+@media(max-width:900px) { .hero { grid-template-columns:1fr; gap:28px; } .hero h1 { font-size:72px; } .hero-photo { height:300px; } .work-grid { grid-template-columns:1fr; } .work-grid > :first-child .work-image { height:340px; } }
+@media(max-width:760px) { .hero h1 { font-size:58px; } .section-heading h2,.about-grid h2 { font-size:40px; } .contact-section h2 { font-size:44px; } .mag-masthead span:nth-child(2) { display:none; } }
