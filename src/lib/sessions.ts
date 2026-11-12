@@ -1,7 +1,6 @@
 export type Session = {
   id: string;
   title: string;
-  date?: string;
   facilitators: string[];
   tools: string[];
   reflection: string[];
@@ -12,7 +11,6 @@ export type Session = {
 export const sessions: Session[] = [{
   id: 'vibe-coding-1',
   title: 'S1: Vibe Coding',
-  date: '9 October 2026',
   facilitators: ['Nirvan', 'Rishabh', 'Yibo'],
   tools: ['Claude Pro or Lovable', 'GitHub', 'Vercel'],
   reflection: [
@@ -39,6 +37,7 @@ export const sessions: Session[] = [{
     'Could we create a similar structure using AI? A research workspace with its own context. A strategy workspace that challenges the findings. A creative workflow that builds on the strategy. And a reviewer that questions assumptions before anything moves forward.',
     'The important distinction is that assigning AI different roles doesn’t automatically create expertise. Outputs still need human judgement, verification and accountability.',
     'For me, the bigger opportunity is moving beyond writing better prompts and learning to design better workflows.',
+    'The competitive advantage may not come from who uses the most AI tools, but from who builds the most thoughtful systems around them.',
   ],
   takeaway: 'Move beyond writing better prompts — learn to design better workflows.',
 }];
