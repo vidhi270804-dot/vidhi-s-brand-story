@@ -13,7 +13,7 @@ export function SessionMenu() {
       <DropdownMenuTrigger asChild><Button variant="ghost" className="session-menu-trigger">Digital Platforms <ChevronDown/></Button></DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={10} className="session-dropdown">
         {sessions.map(item => <div key={item.id}>
-          <DropdownMenuLabel><span className="session-menu-title">{item.title}</span><span className="session-menu-date">{item.date}</span></DropdownMenuLabel>
+          <DropdownMenuLabel><span className="session-menu-title">{item.title}</span>{item.date && <span className="session-menu-date">{item.date}</span>}</DropdownMenuLabel>
           <DropdownMenuSeparator/>
           <DropdownMenuItem onSelect={() => setOpenId(item.id)}><MessageSquare/>My reflection</DropdownMenuItem>
         </div>)}
@@ -24,7 +24,7 @@ export function SessionMenu() {
         {session && <>
           <p className="eyebrow">Learning journal</p>
           <DialogTitle>{session.title}</DialogTitle>
-          <DialogDescription>{session.date} · With {session.facilitators.join(', ')}</DialogDescription>
+          <DialogDescription>{session.date && <>{session.date} · </>}With {session.facilitators.join(', ')}</DialogDescription>
           <div className="session-panel">
             <h3>My reflection</h3>
             {session.reflection.map((paragraph, index) => <p className="session-reflection" key={index}>{paragraph}</p>)}
@@ -33,7 +33,7 @@ export function SessionMenu() {
               <ul>{session.tools.map(tool => <li key={tool}>{tool}</li>)}</ul>
             </div>
             <div className="session-takeaway"><h4>My key takeaway</h4><p>{session.takeaway}</p></div>
-            <div className="session-next"><h4>What’s next</h4><p>{session.nextStep}</p></div>
+            {session.nextStep && <div className="session-next"><h4>What’s next</h4><p>{session.nextStep}</p></div>}
           </div>
         </>}
       </DialogContent>
