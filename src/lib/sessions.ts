@@ -1,12 +1,12 @@
 export type Session = {
   id: string;
   title: string;
-  date: string;
+  date?: string;
   facilitators: string[];
   tools: string[];
   reflection: string[];
   takeaway: string;
-  nextStep: string;
+  nextStep?: string;
 };
 
 export const sessions: Session[] = [{
@@ -26,4 +26,19 @@ export const sessions: Session[] = [{
   ],
   takeaway: 'Just give it a shot — you can build anything.',
   nextStep: 'Learn how to deploy the website and make it public, with help from a mentor.',
+}, {
+  id: 'ai-assistant-1',
+  title: 'S2: AI Assistant',
+  facilitators: ['Nick Goh'],
+  tools: ['Claude', 'Claude Projects', 'n8n'],
+  reflection: [
+    'What if you stopped treating AI like an assistant and started designing it like a team?',
+    'That was the idea that got me thinking after a session with Nick Goh, CEO and AI & Marketing Practitioner at YP Academy and yellowpages Singapore.',
+    'We explored tools such as Claude, Claude Projects and n8n, but what interested me most wasn’t the tools themselves. It was the way work could be organised around them.',
+    'Think about a marketing team. You might have a researcher, strategist, creative, copywriter and analyst. Each has a different responsibility, perspective and output.',
+    'Could we create a similar structure using AI? A research workspace with its own context. A strategy workspace that challenges the findings. A creative workflow that builds on the strategy. And a reviewer that questions assumptions before anything moves forward.',
+    'The important distinction is that assigning AI different roles doesn’t automatically create expertise. Outputs still need human judgement, verification and accountability.',
+    'For me, the bigger opportunity is moving beyond writing better prompts and learning to design better workflows.',
+  ],
+  takeaway: 'Move beyond writing better prompts — learn to design better workflows.',
 }];
