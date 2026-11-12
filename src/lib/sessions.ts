@@ -6,11 +6,13 @@ export type Session = {
   reflection: string[];
   takeaway: string;
   nextStep?: string;
+  visual?: 'flowchart' | 'team';
 };
 
 export const sessions: Session[] = [{
   id: 'vibe-coding-1',
   title: 'S1: Vibe Coding',
+  visual: 'flowchart',
   facilitators: ['Nirvan', 'Rishabh', 'Yibo'],
   tools: ['Claude Pro or Lovable', 'GitHub', 'Vercel'],
   reflection: [
@@ -27,6 +29,7 @@ export const sessions: Session[] = [{
 }, {
   id: 'ai-assistant-1',
   title: 'S2: AI Assistant',
+  visual: 'team',
   facilitators: ['Nick Goh'],
   tools: ['Claude', 'Claude Projects', 'n8n'],
   reflection: [

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { sessions } from '@/lib/sessions';
+import { VibeCodingFlow, AiTeamExplorer } from '@/components/session-visuals';
 
 export function SessionMenu() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -28,6 +29,8 @@ export function SessionMenu() {
           <div className="session-panel">
             <h3>My reflection</h3>
             {session.reflection.map((paragraph, index) => <p className="session-reflection" key={index}>{paragraph}</p>)}
+            {session.visual === 'flowchart' && <VibeCodingFlow/>}
+            {session.visual === 'team' && <AiTeamExplorer/>}
             <div className="session-tools">
               <span className="session-tools-label">What we needed</span>
               <ul>{session.tools.map(tool => <li key={tool}>{tool}</li>)}</ul>
