@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import strategy from '@/assets/editorial-brand.jpg';
-import collaboration from '@/assets/editorial-collaboration.jpg';
+import strategy from '@/assets/brand-strategy.jpg';
+import collaboration from '@/assets/pr-connections.jpg';
 
 const brands = [
   {name:'Chokhana', sub:'The Weave', full:'Chokhana – The Weave'},
