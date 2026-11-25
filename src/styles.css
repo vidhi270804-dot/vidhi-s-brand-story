@@ -285,12 +285,12 @@ a { text-decoration: none; }
 .session-next h4 { font-size:12px; font-weight:600; margin:0 0 8px; }
 .session-next p { font-size:13px; line-height:1.8; color:var(--muted-foreground); }
 @media(max-width:520px) { .session-tools { flex-direction:column; align-items:flex-start; } }
-.session-guest { margin:0 0 26px; border:1px solid var(--border); background:#fff; }
-.session-guest img { display:block; width:100%; height:auto; }
-.session-guest-meta { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; padding:14px 16px; border-top:1px solid var(--border); }
+.session-guest { margin:0 0 26px; padding:16px 18px; border:1px solid var(--border); background:var(--surface-subtle); }
+.session-guest-meta { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; }
 .session-guest-label { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.6px; color:var(--muted-foreground); }
 .session-guest-name { font-family:var(--font-display); font-size:17px; font-weight:600; }
 .session-guest-role { font-size:12px; color:var(--muted-foreground); }
+.session-guest-gist { margin:10px 0 0; font-size:13px; line-height:1.8; color:var(--muted-foreground); }
 .session-note { font-size:13px; line-height:1.8; color:var(--muted-foreground); margin:0; padding-top:18px; border-top:1px solid var(--border); }
 @media(max-width:760px) { .nav-links {gap:5px;} .session-dialog {padding:24px;} }
 @media(max-width:360px) { .site-header {flex-wrap:wrap; height:auto; min-height:72px; gap:8px; padding-block:12px;} }
