@@ -1,4 +1,6 @@
-export type Guest = { name: string; role: string; org?: string; gist?: string };
+import guestProfile from '@/assets/linkedin-guest-profile.png.asset.json';
+
+export type Guest = { name: string; role: string; org?: string };
 
 export type Session = {
   id: string;
@@ -11,6 +13,7 @@ export type Session = {
   nextStep?: string;
   visual?: 'flowchart' | 'team';
   guest?: Guest;
+  image?: { url: string; alt: string };
   note?: string;
 };
 
@@ -52,11 +55,10 @@ export const sessions: Session[] = [{
   id: 'linkedin-1',
   title: 'S3: LinkedIn',
   topic: 'LinkedIn in the Era of LLM — from SEO to GEO',
-  guest: {
-    name: 'Cindy Leong',
-    role: 'Head of Scaled Agency Development, APAC',
-    org: 'LinkedIn',
-    gist: 'Cindy Leong leads LinkedIn’s Scaled Agency team across APAC, helping independent agencies build the skills, strategies and support they need to get more value from the platform.',
+  guest: { name: 'Cindy Leong', role: 'Head of Scaled Agency Development, APAC', org: 'LinkedIn' },
+  image: {
+    url: guestProfile.url,
+    alt: 'Guest profile of Cindy Leong, Head of Scaled Agency Development, APAC at LinkedIn',
   },
-  note: 'Session notes are coming soon.',
+  note: 'Session notes are coming soon — this entry holds the guest profile for now.',
 }];
