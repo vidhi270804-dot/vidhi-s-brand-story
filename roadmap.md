@@ -1,4 +1,5 @@
 # Website roadmap
+- [x] Add the S3: LinkedIn log to the Digital Platforms menu with the guest profile head; reflection to be added when Vidhi sends more information.
 - [x] Replace rust-and-yellow with rust and soft blue, update imagery, and check desktop and mobile.
 - [x] Add the S2: AI Assistant log to the Digital Platforms menu; still needs its session date and the cut-off closing line.
 - [x] Make the Sessions tab reflection-only and write up the first Vibe Coding reflection in full.

@@ -16,7 +16,9 @@ export function SessionMenu() {
         {sessions.map(item => <div key={item.id}>
           <DropdownMenuLabel><span className="session-menu-title">{item.title}</span></DropdownMenuLabel>
           <DropdownMenuSeparator/>
-          <DropdownMenuItem onSelect={() => setOpenId(item.id)}><MessageSquare/>My reflection</DropdownMenuItem>
+          <DropdownMenuItem onSelect={() => setOpenId(item.id)}>
+            <MessageSquare/>{item.reflection?.length ? 'My reflection' : 'Guest profile'}
+          </DropdownMenuItem>
         </div>)}
       </DropdownMenuContent>
     </DropdownMenu>
@@ -25,18 +27,33 @@ export function SessionMenu() {
         {session && <>
           <p className="eyebrow">Learning journal</p>
           <DialogTitle>{session.title}</DialogTitle>
-          <DialogDescription>With {session.facilitators.join(', ')}</DialogDescription>
+          {(session.facilitators?.length || session.topic) && <DialogDescription>
+            {session.facilitators?.length ? `With ${session.facilitators.join(', ')}` : session.topic}
+          </DialogDescription>}
           <div className="session-panel">
-            <h3>My reflection</h3>
-            {session.reflection.map((paragraph, index) => <p className="session-reflection" key={index}>{paragraph}</p>)}
+            {session.image && <figure className="session-guest">
+              <img src={session.image.url} alt={session.image.alt}/>
+              {session.guest && <figcaption className="session-guest-meta">
+                <span className="session-guest-label">Guest</span>
+                <span className="session-guest-name">{session.guest.name}</span>
+                <span className="session-guest-role">
+                  {session.guest.role}{session.guest.org ? `, ${session.guest.org}` : ''}
+                </span>
+              </figcaption>}
+            </figure>}
+            {Boolean(session.reflection?.length) && <>
+              <h3>My reflection</h3>
+              {session.reflection?.map((paragraph, index) => <p className="session-reflection" key={index}>{paragraph}</p>)}
+            </>}
             {session.visual === 'flowchart' && <VibeCodingFlow/>}
             {session.visual === 'team' && <AiTeamExplorer/>}
-            <div className="session-tools">
+            {Boolean(session.tools?.length) && <div className="session-tools">
               <span className="session-tools-label">What we needed</span>
-              <ul>{session.tools.map(tool => <li key={tool}>{tool}</li>)}</ul>
-            </div>
-            <div className="session-takeaway"><h4>My key takeaway</h4><p>{session.takeaway}</p></div>
+              <ul>{session.tools?.map(tool => <li key={tool}>{tool}</li>)}</ul>
+            </div>}
+            {session.takeaway && <div className="session-takeaway"><h4>My key takeaway</h4><p>{session.takeaway}</p></div>}
             {session.nextStep && <div className="session-next"><h4>What’s next</h4><p>{session.nextStep}</p></div>}
+            {session.note && <p className="session-note">{session.note}</p>}
           </div>
         </>}
       </DialogContent>

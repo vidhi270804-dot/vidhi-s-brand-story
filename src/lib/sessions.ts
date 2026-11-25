@@ -1,12 +1,20 @@
+import guestProfile from '@/assets/linkedin-guest-profile.png.asset.json';
+
+export type Guest = { name: string; role: string; org?: string };
+
 export type Session = {
   id: string;
   title: string;
-  facilitators: string[];
-  tools: string[];
-  reflection: string[];
-  takeaway: string;
+  topic?: string;
+  facilitators?: string[];
+  tools?: string[];
+  reflection?: string[];
+  takeaway?: string;
   nextStep?: string;
   visual?: 'flowchart' | 'team';
+  guest?: Guest;
+  image?: { url: string; alt: string };
+  note?: string;
 };
 
 export const sessions: Session[] = [{
@@ -43,4 +51,14 @@ export const sessions: Session[] = [{
     'The competitive advantage may not come from who uses the most AI tools, but from who builds the most thoughtful systems around them.',
   ],
   takeaway: 'Move beyond writing better prompts — learn to design better workflows.',
+}, {
+  id: 'linkedin-1',
+  title: 'S3: LinkedIn',
+  topic: 'LinkedIn in the Era of LLM — from SEO to GEO',
+  guest: { name: 'Cindy Leong', role: 'Head of Scaled Agency Development, APAC', org: 'LinkedIn' },
+  image: {
+    url: guestProfile.url,
+    alt: 'Guest profile of Cindy Leong, Head of Scaled Agency Development, APAC at LinkedIn',
+  },
+  note: 'Session notes are coming soon — this entry holds the guest profile for now.',
 }];
