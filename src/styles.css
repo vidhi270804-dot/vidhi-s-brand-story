@@ -324,3 +324,6 @@ a { text-decoration: none; }
 .session-visual .flow-num, .flow-num { font-family:var(--font-body); }
 @media(max-width:900px) { .hero { grid-template-columns:1fr; gap:28px; } .hero h1 { font-size:72px; } .hero-photo { height:300px; } .work-grid { grid-template-columns:1fr; } .work-grid > :first-child .work-image { height:340px; } }
 @media(max-width:760px) { .hero h1 { font-size:58px; } .section-heading h2,.about-grid h2 { font-size:40px; } .contact-section h2 { font-size:44px; } .mag-masthead span:nth-child(2) { display:none; } }
+.skills-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem;padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.skills-strip p{margin-top:.4rem}
+.availability{margin-top:.75rem;font-weight:600}
