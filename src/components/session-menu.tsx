@@ -17,7 +17,7 @@ export function SessionMenu() {
           <DropdownMenuLabel><span className="session-menu-title">{item.title}</span></DropdownMenuLabel>
           <DropdownMenuSeparator/>
           <DropdownMenuItem onSelect={() => setOpenId(item.id)}>
-            <MessageSquare/>{item.reflection?.length ? 'My reflection' : 'Guest profile'}
+            <MessageSquare/>My reflection
           </DropdownMenuItem>
         </div>)}
       </DropdownMenuContent>
@@ -31,16 +31,16 @@ export function SessionMenu() {
             {session.facilitators?.length ? `With ${session.facilitators.join(', ')}` : session.topic}
           </DialogDescription>}
           <div className="session-panel">
-            {session.image && <figure className="session-guest">
-              <img src={session.image.url} alt={session.image.alt}/>
-              {session.guest && <figcaption className="session-guest-meta">
+            {session.guest && <div className="session-guest">
+              <div className="session-guest-meta">
                 <span className="session-guest-label">Guest</span>
                 <span className="session-guest-name">{session.guest.name}</span>
                 <span className="session-guest-role">
                   {session.guest.role}{session.guest.org ? `, ${session.guest.org}` : ''}
                 </span>
-              </figcaption>}
-            </figure>}
+              </div>
+              {session.guest.gist && <p className="session-guest-gist">{session.guest.gist}</p>}
+            </div>}
             {Boolean(session.reflection?.length) && <>
               <h3>My reflection</h3>
               {session.reflection?.map((paragraph, index) => <p className="session-reflection" key={index}>{paragraph}</p>)}
